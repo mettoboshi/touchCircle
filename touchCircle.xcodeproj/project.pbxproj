@@ -279,7 +279,11 @@
 		BEB3E32917B3C802003DD19E /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E32817B3C802003DD19E /* cpVect.c */; };
 		BEB3E33117B3C802003DD19E /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB3E33017B3C802003DD19E /* libwebsockets.a */; };
 		BEB3E33717B3C802003DD19E /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E33617B3C802003DD19E /* AppDelegate.cpp */; };
-		BEB3E33A17B3C802003DD19E /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E33917B3C802003DD19E /* HelloWorldScene.cpp */; };
+		BEB3E33A17B3C802003DD19E /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E33917B3C802003DD19E /* GameLayer.cpp */; };
+		BEB3E34A17B5DDFA003DD19E /* kuro.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB3E34717B5DDFA003DD19E /* kuro.png */; };
+		BEB3E34B17B5DDFA003DD19E /* shiro.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB3E34817B5DDFA003DD19E /* shiro.png */; };
+		BEB3E34D17B5E1EA003DD19E /* koushi.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB3E34C17B5E1EA003DD19E /* koushi.png */; };
+		BEB3EAC617BF64BD003DD19E /* gameSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB3EAC417BF64BD003DD19E /* gameSpace.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -871,8 +875,13 @@
 		BEB3E33317B3C802003DD19E /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		BEB3E33517B3C802003DD19E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		BEB3E33617B3C802003DD19E /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		BEB3E33817B3C802003DD19E /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		BEB3E33917B3C802003DD19E /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		BEB3E33817B3C802003DD19E /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = Classes/GameLayer.h; sourceTree = "<group>"; };
+		BEB3E33917B3C802003DD19E /* GameLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
+		BEB3E34717B5DDFA003DD19E /* kuro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuro.png; sourceTree = "<group>"; };
+		BEB3E34817B5DDFA003DD19E /* shiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shiro.png; sourceTree = "<group>"; };
+		BEB3E34C17B5E1EA003DD19E /* koushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koushi.png; sourceTree = "<group>"; };
+		BEB3EAC417BF64BD003DD19E /* gameSpace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameSpace.cpp; sourceTree = "<group>"; };
+		BEB3EAC517BF64BD003DD19E /* gameSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameSpace.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -948,7 +957,10 @@
 				BEB3DFA717B3C7F9003DD19E /* CloseSelected.png */,
 				BEB3DFA917B3C7F9003DD19E /* Default.png */,
 				BEB3DFAB17B3C7F9003DD19E /* HelloWorld.png */,
+				BEB3E34C17B5E1EA003DD19E /* koushi.png */,
 				BEB3DFAD17B3C7F9003DD19E /* Icon-72.png */,
+				BEB3E34717B5DDFA003DD19E /* kuro.png */,
+				BEB3E34817B5DDFA003DD19E /* shiro.png */,
 				BEB3DFAF17B3C7F9003DD19E /* Icon-Small-50.png */,
 				BEB3DFB117B3C7F9003DD19E /* Icon-Small.png */,
 				BEB3DFB317B3C7F9003DD19E /* Icon-Small@2x.png */,
@@ -2095,8 +2107,10 @@
 			children = (
 				BEB3E33517B3C802003DD19E /* AppDelegate.h */,
 				BEB3E33617B3C802003DD19E /* AppDelegate.cpp */,
-				BEB3E33817B3C802003DD19E /* HelloWorldScene.h */,
-				BEB3E33917B3C802003DD19E /* HelloWorldScene.cpp */,
+				BEB3E33817B3C802003DD19E /* GameLayer.h */,
+				BEB3E33917B3C802003DD19E /* GameLayer.cpp */,
+				BEB3EAC417BF64BD003DD19E /* gameSpace.cpp */,
+				BEB3EAC517BF64BD003DD19E /* gameSpace.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2164,6 +2178,9 @@
 				BEB3DFBA17B3C7F9003DD19E /* iTunesArtwork in Resources */,
 				BEB3E05917B3C7FA003DD19E /* ChangeLog in Resources */,
 				BEB3E1CD17B3C7FE003DD19E /* project.pbxproj in Resources */,
+				BEB3E34A17B5DDFA003DD19E /* kuro.png in Resources */,
+				BEB3E34B17B5DDFA003DD19E /* shiro.png in Resources */,
+				BEB3E34D17B5E1EA003DD19E /* koushi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2422,7 +2439,8 @@
 				BEB3E32717B3C802003DD19E /* cpSweep1D.c in Sources */,
 				BEB3E32917B3C802003DD19E /* cpVect.c in Sources */,
 				BEB3E33717B3C802003DD19E /* AppDelegate.cpp in Sources */,
-				BEB3E33A17B3C802003DD19E /* HelloWorldScene.cpp in Sources */,
+				BEB3E33A17B3C802003DD19E /* GameLayer.cpp in Sources */,
+				BEB3EAC617BF64BD003DD19E /* gameSpace.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2564,6 +2582,7 @@
 				BEB3E33F17B3C802003DD19E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
